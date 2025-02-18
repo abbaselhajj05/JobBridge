@@ -29,7 +29,7 @@ JobBridge is a web application designed to connect job seekers with potential em
 
 2. Navigate to the project directory:
    ```bash
-   cd jobbridge
+   cd job_bridge
    ```
 
 3. Create a MySQL database and import the SQL file located in the `/database` directory.
