@@ -1,5 +1,3 @@
-Sure! Here's a complete README for your JobBridge PHP project.
-
 # JobBridge
 
 JobBridge is a web application designed to connect job seekers with potential employers, streamlining the job application process. This PHP-based project provides a platform for employers to post job listings and for job seekers to create profiles, search for jobs, and submit applications.
