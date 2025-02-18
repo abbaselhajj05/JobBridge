@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f1f5f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+.site-navbar {
+    background: transparent; /* Transparent background to overlay the hero */
+    position: absolute;
+    top: 20px; /* Offset from the top */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.site-navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-logo a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff; /* White text for contrast on the hero background */
+}
+
+.site-navigation .site-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.site-navigation .site-menu li {
+    margin: 0 1rem;
+}
+
+.site-navigation .site-menu li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+.site-navigation .site-menu li a:hover,
+.site-navigation .site-menu li a.active {
+    color: #4299e1;
+}
+
+/* Prevent email from wrapping */
+.dropdown-menu .dropdown-item {
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+.dropdown-menu {
+    min-width: 200px; /* Set a minimum width for the dropdown */
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    z-index: 1001; /* Higher than navbar's z-index */
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    color: #333 !important; /* Force dark text to be visible */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.logout-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Right Call-to-Action */
+.right-cta-menu .btn {
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.btn-outline-white {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.btn-outline-white:hover {
+    background: #fff;
+    color: #4299e1;
+}
+
+.btn-primary {
+    background: #4299e1;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #3182ce;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-logo,
+    .right-cta-menu {
+        text-align: center;
+    }
+    .site-navbar .row {
+        flex-direction: column;
+    }
+}

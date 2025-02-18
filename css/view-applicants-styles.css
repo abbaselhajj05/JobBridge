@@ -1,0 +1,198 @@
+/* Applicants Grid Container */
+.applicants-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin-top: 2rem;
+	justify-content: center;
+}
+
+/* Applicant Card */
+.applicant-card {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	width: 250px;
+}
+
+.applicant-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Section: Profile Picture with Overlay */
+.applicant-card-image {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f7fafc;
+	padding-top: 1rem;
+}
+
+.applicant-card-image img {
+	width: 80%;
+	max-width: 130px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #e2e8f0;
+}
+
+/* Overlay for Resume & Profile Icons */
+.card-overlay {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.overlay-btn {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	color: #333;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+}
+
+/* Overlay Button Variants */
+.overlay-btn.download-btn {
+	background: #4299e1;
+	color: #fff;
+}
+
+.overlay-btn.download-btn:hover {
+	background: #3182ce;
+}
+
+.overlay-btn.view-btn {
+	background: #edf2f7;
+	color: #1a202c;
+}
+
+.overlay-btn.view-btn:hover {
+	background: #e2e8f0;
+}
+
+/* Middle Section: Applicant Info */
+.applicant-card-info {
+	text-align: center;
+	padding: 1rem;
+}
+
+.applicant-name {
+	font-size: 1.25rem;
+	color: #1a202c;
+	margin: 0.5rem 0 0.25rem;
+	font-weight: 700;
+}
+
+.applicant-job-title {
+	font-size: 1rem;
+	color: #718096;
+	margin: 0;
+}
+
+/* Footer: Accept Button */
+.applicant-card-footer {
+    display: flex;
+    border-top: 1px solid #e2e8f0;
+    padding: 0;  /* Remove extra padding */
+    margin: 0;
+  }
+
+  .applicant-btn-group {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .applicant-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    margin: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .accept-btn {
+    background: #38a169;
+    color: #fff;
+  }
+
+  .accept-btn:hover {
+    background: #2f855a;
+  }
+
+/* Accepted Status Indicator */
+.accepted-status {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+}
+
+.accepted-bubble {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #38a169;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    animation: statusPulse 2s infinite;
+}
+
+.accepted-bubble svg {
+    width: 14px;
+    height: 14px;
+}
+
+@keyframes statusPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Card Highlight */
+.applicant-card.accepted {
+    border: 2px solid #38a169;
+    background: linear-gradient(145deg, #f8fff9 0%, #ffffff 100%);
+    position: relative;
+    overflow: visible;
+}
+
+.applicant-card.accepted::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 14px;
+    background: linear-gradient(120deg, 
+        rgba(56, 161, 105, 0.15) 0%, 
+        rgba(56, 161, 105, 0.05) 100%);
+    z-index: -1;
+}
