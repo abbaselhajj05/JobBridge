@@ -24,7 +24,7 @@ JobBridge is a web application designed to connect job seekers with potential em
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/abbaselhajj05/JobBridge.git
+   git clone https://github.com/abbaselhajj05/job_bridge.git
    ```
 
 2. Navigate to the project directory:
